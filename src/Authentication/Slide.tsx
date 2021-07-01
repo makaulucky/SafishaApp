@@ -36,7 +36,7 @@ const styles=StyleSheet.create({
     title:{
         
         fontSize:90,
-        lineHeight:110,
+        lineHeight:116,
         fontWeight:"bold",
         color:"white",
         textAlign:"center",
