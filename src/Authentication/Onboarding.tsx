@@ -1,13 +1,16 @@
 import React from 'react';
 import { StyleSheet, Dimensions,Text, View } from 'react-native';
-import Animated, { useValue } from 'react-native-reanimated';
+import Animated, 
+{ useValue } from 'react-native-reanimated';
 import Slide,{SLIDE_HEIGHT} from './Slide';
+
+
 
 
 const {width} = Dimensions.get("screen");
 
 const Onboarding = () => {
-    const x= useValue
+    const x= useValue(0);
 
     return (
         <View style={styles.container}>
@@ -17,7 +20,10 @@ const Onboarding = () => {
                 decelerationRate="fast" 
                 showsHorizontalScrollIndicator={false}
                  bounces={false}
+                 scrollEventThrottle={1}
                  
+                 
+                                  
                  >
                     <Slide label="Our Team" />
                     <Slide label="Is Always" right/>
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
     },
     slide: {
         height: SLIDE_HEIGHT,
-        backgroundColor:"#2665d8",
+        backgroundColor:"#007ffe",
         borderBottomRightRadius:75,
 
     },

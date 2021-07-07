@@ -27,7 +27,7 @@ const Slide = ({label, right} : SlideProps) => {
 
 export default Slide;
 
-
+//styles
 
 const styles=StyleSheet.create({
     container: {
