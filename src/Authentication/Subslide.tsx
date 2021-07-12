@@ -6,10 +6,9 @@ interface SubslideProps{
     subtitle: string;
     description: string;
     last: boolean;
-    x: Animated.Node<number>;
 }
 
-const Subslide =({subtitle, description, last, x }: SubslideProps)=> {
+const Subslide =({subtitle, description, last}: SubslideProps)=> {
     return (
     <View style={styles.container} >
         <Text style={styles.subtitle}>{subtitle}</Text>
@@ -29,15 +28,18 @@ const styles=StyleSheet.create({
         flex: 1,
         justifyContent:"center",
         alignItems:"center",
+        padding:24
     },
     subtitle: {
-        fontSize: 30,
+        fontSize: 24,
         fontFamily: "sans-serif-medium",
 
     },
     description:{
-        fontSize: 18,
+        fontSize: 16,
         fontFamily: "sans-serif",
+        lineHeight:24,
+        color: "#0c0d34",
 
     },
 

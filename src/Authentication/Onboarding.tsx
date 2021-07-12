@@ -41,12 +41,12 @@ const Onboarding = () => {
 
             <View style={styles.footer}>
             <Animated.View                 
-                 style={{flex:1, backgroundColor:"white", borderTopRightRadius:BORDER_RADIUS,}}/>
+                 style={{...StyleSheet.absoluteFillObject,backgroundColor:"#007ffe"}}/>
 
-               <View style={styles.footerContent}>
+               <View style={styles.footerContent }>
                 {slides.map(({subtitle, description, x },index)=>(
                     <Subslide
-                          key={index} last={index===(slides.length-1)} {...{subtitle,description,x}}/>
+                          key={index} last={index===(slides.length-1)} {...{subtitle,description, x }}/>
                      ))}
 
                 </View>
@@ -72,7 +72,8 @@ const styles = StyleSheet.create({
         flex:1,
     },
     footerContent: {
-        flex: 1,
+        flex:1,
+        flexDirection:"row",
         backgroundColor: "white",
         borderTopLeftRadius: BORDER_RADIUS,
 
