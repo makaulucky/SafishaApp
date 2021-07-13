@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Dimensions, View } from 'react-native';
-import Animated, 
-{ useValue } from 'react-native-reanimated';
+import Animated,
+{ useValue, multiply } from 'react-native-reanimated';
 import Slide,{SLIDE_HEIGHT} from './Slide';
 import Subslide from './Subslide';
 
@@ -43,7 +43,8 @@ const Onboarding = () => {
             <Animated.View                 
                  style={{...StyleSheet.absoluteFillObject,backgroundColor:"#007ffe"}}/>
 
-               <View style={styles.footerContent }>
+               <View style={[styles.footerContent, { width: width * slides.length, flex:1, }]}>
+
                 {slides.map(({subtitle, description, x },index)=>(
                     <Subslide
                           key={index} last={index===(slides.length-1)} {...{subtitle,description, x }}/>
