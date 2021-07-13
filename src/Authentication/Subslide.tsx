@@ -6,6 +6,7 @@ interface SubslideProps{
     subtitle: string;
     description: string;
     last: boolean;
+    
 }
 
 const Subslide =({subtitle, description, last}: SubslideProps)=> {
@@ -27,19 +28,25 @@ const styles=StyleSheet.create({
     container: {
         flex: 1,
         justifyContent:"center",
-        alignItems:"center",
-        padding:24
+        alignItems:"center",       
+        padding:40
     },
     subtitle: {
-        fontSize: 24,
-        fontFamily: "sans-serif-medium",
+        fontSize: 38,
+        fontWeight:"bold",
+        lineHeight:28,
+        fontFamily: "sans-serif",
+        marginBottom:12,
+        padding:18
 
     },
     description:{
-        fontSize: 16,
+        flex:1,
+        fontSize: 28,
         fontFamily: "sans-serif",
-        lineHeight:24,
+        lineHeight:38,
         color: "#0c0d34",
+        textAlign:"center"
 
     },
 
