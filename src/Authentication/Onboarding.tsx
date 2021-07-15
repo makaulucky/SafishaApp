@@ -19,7 +19,8 @@ const slides =[
 ];
 
 const Onboarding = () => {
-    const x= useValue(0);
+    const x= React.useRef(new Animated.Value(0)).current;
+    //useValue(0)
 
     return (
         <View style={styles.container}>
@@ -29,7 +30,9 @@ const Onboarding = () => {
                 decelerationRate="fast" 
                 showsHorizontalScrollIndicator={false}
                  bounces={false}
-                 scrollEventThrottle={1}               
+                 scrollEventThrottle={16} 
+                 onScroll={Animated.event([{nativeEvent: {contentOffset: {x: x}}}],
+                    {useNativeDriver: false})}              
                   
                  >
                      { slides.map(({title}, index)=>(
@@ -43,14 +46,14 @@ const Onboarding = () => {
             <Animated.View                 
                  style={{...StyleSheet.absoluteFillObject,backgroundColor:"#007ffe"}}/>
 
-               <View style={[styles.footerContent, { width: width * slides.length, flex:1, }]}>
+               <Animated.View style={[styles.footerContent, { width: width * slides.length, flex:1, transform:[{translateX: multiply(x, -1)}],}]}>
 
-                {slides.map(({subtitle, description, x },index)=>(
+                {slides.map(({subtitle, description },index)=>(
                     <Subslide
-                          key={index} last={index===(slides.length-1)} {...{subtitle,description, x }}/>
+                          key={index} last={index===(slides.length -1)} {...{subtitle,description, x }}/>
                      ))}
 
-                </View>
+                </Animated.View>
             </View>
         </View>
     );
