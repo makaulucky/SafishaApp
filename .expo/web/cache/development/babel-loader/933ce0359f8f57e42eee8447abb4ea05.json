@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default as Onboarding } from \"./Onboarding\";","map":{"version":3,"sources":["/home/lucky/Projects/Safisha/src/Authentication/index.tsx"],"names":["default","Onboarding"],"mappings":"AAAA,SAAQA,OAAO,IAAIC,UAAnB","sourcesContent":["export {default as Onboarding} from \"./Onboarding\";"]},"metadata":{},"sourceType":"module"}
