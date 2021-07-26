@@ -30,7 +30,7 @@ const Onboarding = () => {
                 decelerationRate="fast" 
                 showsHorizontalScrollIndicator={false}
                  bounces={false}
-                 scrollEventThrottle={16} 
+                 scrollEventThrottle={1} 
                  onScroll={Animated.event([{nativeEvent: {contentOffset: {x: x}}}],
                     {useNativeDriver: false})}              
                   
