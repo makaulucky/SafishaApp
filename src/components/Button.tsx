@@ -1,7 +1,6 @@
 import React from 'react'
 import { Text, View, StyleSheet} from 'react-native'
-import RectButton from "react-native-gesture-handler"
-
+import {RectButton} from "react-native-gesture-handler"
 
 interface ButtonProps {
     variant: "default" | "primary";
