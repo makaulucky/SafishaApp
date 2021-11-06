@@ -12,12 +12,8 @@ const Button=({variant, label}: ButtonProps) => {
     const color= variant==="primary" ? "white" : "#0c0d34";
     return (
 
-        <RectButton>
-            <View style={[styles.container, {backgroundColor}]} >
-
-            </View>
+        <RectButton style={[styles.container, {backgroundColor}]}>           
             <Text style={[styles.label, {color}]}>{label}</Text>
-            
         </RectButton>
     )
         
@@ -32,13 +28,15 @@ export default Button;
 const styles = StyleSheet.create({
     container: {
         borderRadius:25,
-        height:50,
+        height:45,
         width:245,
-        backgroundColor:"gray"
+        backgroundColor:"black"
     },
     label: {
-        fontSize:15,
+        fontSize:14,
         fontFamily: "sans-serif",
+        textAlign: "center",
+        justifyContent: "center",
 
     },
 })

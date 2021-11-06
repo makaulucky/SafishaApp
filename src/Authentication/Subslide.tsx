@@ -31,12 +31,12 @@ const styles=StyleSheet.create({
         flex: 1,
         justifyContent:"center",
         alignItems:"center",       
-        padding:40
+        padding:28
     },
     subtitle: {
-        fontSize: 34,
+        fontSize: 18,
         fontWeight:"200",
-        lineHeight:28,
+        lineHeight:20,
         fontFamily: "sans-serif",
         marginBottom:12,
         padding:18
@@ -44,12 +44,12 @@ const styles=StyleSheet.create({
     },
     description:{
         flex:1,
-        fontSize: 24,
+        fontSize: 18,
         fontFamily: "sans-serif",
-        lineHeight:38,
+        lineHeight:24,
         color: "#0c0d34",
         textAlign:"center",
-        marginBottom:40,
+        marginBottom:10,
 
     },
 
