@@ -9,7 +9,7 @@ const {width} = Dimensions.get("screen");
 const BORDER_RADIUS =75;
 
 const slides =[
-    {title: "Our Team",subtitle: "Get Clean", description: "Are you bothered about dirty laundry? Don't worry! Find the best cleaning services here!" },
+    {title: "Welcome",subtitle: "Get Clean", description: "Are you bothered about dirty laundry? Don't worry! Find the best cleaning services here!" },
 
     {title: "Is Always",subtitle: "In need of house maids?", description: "Relax... Uko sorted! They are Ready for you!" },
 
